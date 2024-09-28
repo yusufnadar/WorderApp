@@ -1,8 +1,9 @@
+import 'package:english_words/src/core/exports/constants_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../../core/exports/constants_exports.dart';
-import '../../../viewModel/home_view_model.dart';
+import '../../../../../core/constants/text_styles/text_style_constants.dart';
+import '../../../view_model/home_view_model.dart';
 
 class FilterRadioList extends StatelessWidget {
   final int value;
@@ -21,7 +22,7 @@ class FilterRadioList extends StatelessWidget {
       value: value,
       title: Text(
         title,
-        style: TextStyleConstants.regularStyle(fontSize: 14),
+        style: TextStyleConstants.regularStyle(fontSize: context.width * 0.036),
       ),
       groupValue: model.filterType,
       onChanged: (value) => model.changeFilterType(value),

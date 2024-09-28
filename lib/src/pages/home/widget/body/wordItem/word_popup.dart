@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../../../../../common/models/words_model.dart';
+import '../../../../../core/constants/text_styles/text_style_constants.dart';
 import '../../../../../core/exports/constants_exports.dart';
-import '../../../viewModel/home_view_model.dart';
+import '../../../view_model/home_view_model.dart';
 import 'delete_dialog.dart';
 import 'edit_dialog.dart';
 
@@ -29,14 +31,14 @@ class WordPopup extends StatelessWidget {
           case 'delete':
             showDialog(
               context: context,
-              builder: (_) => DeleteDialog(id: item.id!,context:context),
+              builder: (_) => DeleteDialog(id: item.id!, context: context),
             );
             break;
           case 'edit':
             model.fillTexts(item);
             showDialog(
               context: context,
-              builder: (_) => EditDialog(id: item.id!, index: index,context:context),
+              builder: (_) => EditDialog(id: item.id!, index: index, context: context),
             );
             break;
 
@@ -45,13 +47,23 @@ class WordPopup extends StatelessWidget {
       },
       itemBuilder: (BuildContext context) {
         return [
-          const PopupMenuItem<String>(
+          PopupMenuItem<String>(
             value: 'edit',
-            child: Text('Edit'),
+            child: Text(
+              'Edit',
+              style: TextStyleConstants.regularStyle(
+                fontSize: context.width * 0.038,
+              ),
+            ),
           ),
-          const PopupMenuItem<String>(
+          PopupMenuItem<String>(
             value: 'delete',
-            child: Text('Delete'),
+            child: Text(
+              'Delete',
+              style: TextStyleConstants.regularStyle(
+                fontSize: context.width * 0.038,
+              ),
+            ),
           ),
         ];
       },

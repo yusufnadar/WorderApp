@@ -9,5 +9,4 @@ export '../constants/icons/icon_constants.dart';
 export '../constants/images/image_constants.dart';
 export '../constants/local/local_constants.dart';
 export '../constants/navigation/navigation_constants.dart';
-export '../constants/textStyles/text_style_constants.dart';
 export '../constants/theme/theme_constants.dart';

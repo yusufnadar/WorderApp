@@ -1,12 +1,8 @@
 PODS:
-  - awesome_notifications (0.7.5-dev.3):
-    - Flutter
-    - IosAwnCore (= 0.7.5-dev.3)
   - Flutter (1.0.0)
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - IosAwnCore (0.7.5-dev.3)
   - path_provider_foundation (0.0.1):
     - Flutter
     - FlutterMacOS
@@ -15,7 +11,6 @@ PODS:
     - FMDB (>= 2.7.5)
 
 DEPENDENCIES:
-  - awesome_notifications (from `.symlinks/plugins/awesome_notifications/ios`)
   - Flutter (from `Flutter`)
   - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/darwin`)
   - sqflite (from `.symlinks/plugins/sqflite/ios`)
@@ -23,11 +18,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - FMDB
-    - IosAwnCore
 
 EXTERNAL SOURCES:
-  awesome_notifications:
-    :path: ".symlinks/plugins/awesome_notifications/ios"
   Flutter:
     :path: Flutter
   path_provider_foundation:
@@ -36,13 +28,11 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/sqflite/ios"
 
 SPEC CHECKSUMS:
-  awesome_notifications: 1b6393d6ce02878dc50d0ae87baf7bdbc9d802a2
   Flutter: f04841e97a9d0b0a8025694d0796dd46242b2854
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  IosAwnCore: edf31913fd18960ebcde7c05912dc860ca2b63b2
   path_provider_foundation: eaf5b3e458fc0e5fbb9940fb09980e853fe058b8
   sqflite: 31f7eba61e3074736dff8807a9b41581e4f7f15a
 
 PODFILE CHECKSUM: 70d9d25280d0dd177a5f637cdb0f0b0b12c6a189
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.14.3

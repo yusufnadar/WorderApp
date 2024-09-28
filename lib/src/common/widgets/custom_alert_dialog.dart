@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../../../src/core/exports/constants_exports.dart';
+import '../../core/constants/text_styles/text_style_constants.dart';
 
 class CustomAlertDialog extends StatelessWidget {
   final String title;
@@ -31,7 +32,7 @@ class CustomAlertDialog extends StatelessWidget {
         top: context.height * 0.02,
       ),
       contentPadding: contentPadding,
-      title: buildAlertDialogTitle(title),
+      title: buildAlertDialogTitle(title,context),
       actionsPadding: EdgeInsets.only(
         right: context.width * 0.05,
         left: context.width * 0.05,
@@ -48,11 +49,11 @@ class CustomAlertDialog extends StatelessWidget {
     );
   }
 
-  Text buildAlertDialogTitle(String title) {
+  Text buildAlertDialogTitle(String title,BuildContext context) {
     return Text(
       title,
       style: TextStyleConstants.mediumStyle(
-        fontSize: 18,
+        fontSize: context.width*0.05,
         color: ColorConstants.primary,
       ),
       textAlign: TextAlign.center,

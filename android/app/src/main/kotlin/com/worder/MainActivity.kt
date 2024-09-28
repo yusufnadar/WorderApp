@@ -1,4 +1,4 @@
-package com.example.english_words
+package com.worder
 
 import io.flutter.embedding.android.FlutterActivity
 

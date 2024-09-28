@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/constants/text_styles/text_style_constants.dart';
 import '../../core/exports/constants_exports.dart';
 
 class SearchInput extends StatelessWidget {
@@ -23,7 +24,7 @@ class SearchInput extends StatelessWidget {
         filled: true,
         hintText: 'Word',
         hintStyle: TextStyleConstants.regularStyle(
-          fontSize: 14,
+          fontSize: context.width*0.04,
           color: ColorConstants.darkGrey,
         ),
         border: const OutlineInputBorder(

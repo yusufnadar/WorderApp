@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../../../../core/constants/text_styles/text_style_constants.dart';
 import '../../../../../core/exports/constants_exports.dart';
 
 class WordMeaning extends StatelessWidget {
@@ -15,7 +17,7 @@ class WordMeaning extends StatelessWidget {
       child: Text(
         meaning,
         style: TextStyleConstants.regularStyle(
-          fontSize: 14,
+          fontSize: context.width*0.032,
           color: ColorConstants.darkGrey,
         ),
       ),

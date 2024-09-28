@@ -1,8 +1,9 @@
-import '../../../../../src/core/exports/constants_exports.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../../../../src/core/exports/constants_exports.dart';
+import '../../../../common/widgets/custom_word_length.dart';
 import '../../../../common/widgets/search_input.dart';
-import '../../viewModel/home_view_model.dart';
+import '../../view_model/home_view_model.dart';
 import 'app_bar_title.dart';
 import 'favorites_button.dart';
 import 'filterButton/filter_button.dart';
@@ -23,6 +24,10 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
           horizontal: context.width * 0.04,
         ),
         child: model.isFocus == false ? buildNotFocus() : buildFocus(model),
+      ),
+      bottom: PreferredSize(
+        preferredSize: const Size.fromHeight(0),
+        child: CustomWordLength(length: model.words.length),
       ),
     );
   }
@@ -56,5 +61,5 @@ class HomeAppBar extends StatelessWidget implements PreferredSizeWidget {
   }
 
   @override
-  Size get preferredSize => Size.fromHeight(context.height * 0.07);
+  Size get preferredSize => Size.fromHeight(context.height * 0.11);
 }

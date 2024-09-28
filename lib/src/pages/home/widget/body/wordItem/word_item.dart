@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../../../../../common/models/words_model.dart';
 import '../../../../../core/exports/constants_exports.dart';
-import '../../../viewModel/home_view_model.dart';
+import '../../../view_model/home_view_model.dart';
 import 'word_meaning.dart';
 import 'word_popup.dart';
 import 'word_title.dart';
@@ -50,9 +51,7 @@ class WordItem extends StatelessWidget {
               child: Image.asset(
                 IconConstants.favorites,
                 width: context.width * 0.05,
-                color: item.favorite == true
-                    ? ColorConstants.yellow
-                    : ColorConstants.normalGrey,
+                color: item.favorite == true ? ColorConstants.yellow : ColorConstants.normalGrey,
               ),
             ),
           ),

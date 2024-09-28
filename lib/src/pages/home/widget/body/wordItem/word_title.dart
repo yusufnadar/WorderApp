@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../../../../../core/constants/text_styles/text_style_constants.dart';
 import '../../../../../core/exports/constants_exports.dart';
 
 class WordTitle extends StatelessWidget {
@@ -10,7 +12,7 @@ class WordTitle extends StatelessWidget {
     return Text(
       title,
       style: TextStyleConstants.regularStyle(
-        fontSize: 16.3,
+        fontSize: context.width*0.04,
       ),
     );
   }

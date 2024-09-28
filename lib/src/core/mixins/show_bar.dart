@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import '../constants/text_styles/text_style_constants.dart';
 import '../exports/constants_exports.dart';
 import '../services/navigation/navigation_service.dart';
 

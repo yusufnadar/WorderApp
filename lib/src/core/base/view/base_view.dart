@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../services/locator/locator_service.dart';
-import '../viewModel/base_view_model.dart';
+import '../view_model/base_view_model.dart';
 
 class BaseView<T extends ChangeNotifier> extends StatefulWidget {
   final Widget Function(BuildContext context, T model, Widget? child) builder;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/constants/text_styles/text_style_constants.dart';
 import '../../../../core/exports/constants_exports.dart';
 
 class AppBarTitle extends StatelessWidget {
@@ -11,7 +12,7 @@ class AppBarTitle extends StatelessWidget {
     return Text(
       title ?? 'Worder',
       style: TextStyleConstants.boldStyle(
-        fontSize: 24,
+        fontSize: context.width*0.055,
         color: ColorConstants.white,
       ),
     );

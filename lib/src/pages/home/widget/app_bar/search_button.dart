@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../../../../core/exports/constants_exports.dart';
-import '../../viewModel/home_view_model.dart';
+import '../../view_model/home_view_model.dart';
 
 class SearchButton extends StatelessWidget {
   const SearchButton({Key? key}) : super(key: key);

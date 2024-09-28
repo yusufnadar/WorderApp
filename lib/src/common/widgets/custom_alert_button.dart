@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/constants/text_styles/text_style_constants.dart';
 import '../../core/exports/constants_exports.dart';
 
 class CustomAlertButton extends StatelessWidget {
@@ -31,7 +32,7 @@ class CustomAlertButton extends StatelessWidget {
         child: Text(
           title,
           style: TextStyleConstants.regularStyle(
-            fontSize: 16,
+            fontSize: context.width*0.04,
             color: ColorConstants.white,
           ),
         ),

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import '../../../../core/constants/text_styles/text_style_constants.dart';
 import '../../../../core/exports/constants_exports.dart';
-import '../../viewModel/home_view_model.dart';
+import '../../view_model/home_view_model.dart';
 import 'add_dialog.dart';
 
 class FloatingAddButton extends StatelessWidget {
@@ -23,8 +24,8 @@ class FloatingAddButton extends StatelessWidget {
       label: Text(
         'New Word',
         style: TextStyleConstants.semiBoldStyle(
-          fontSize: 16,
-          color: ColorConstants.white
+          fontSize: context.width * 0.045,
+          color: ColorConstants.white,
         ),
       ),
     );

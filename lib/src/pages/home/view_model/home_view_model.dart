@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+
 import '../../../common/models/words_model.dart';
-import '../../../core/base/viewModel/base_view_model.dart';
-import '../../../core/services/databaseHelper/database_helper_service.dart';
+import '../../../core/base/view_model/base_view_model.dart';
+import '../../../core/services/database_helper/database_helper_service.dart';
 import '../../../core/services/navigation/navigation_service.dart';
 
 class HomeViewModel extends ChangeNotifier with BaseViewModel {

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../../../common/models/words_model.dart';
-import '../../../core/base/viewModel/base_view_model.dart';
-import '../../../core/services/databaseHelper/database_helper_service.dart';
+import '../../../core/base/view_model/base_view_model.dart';
+import '../../../core/services/database_helper/database_helper_service.dart';
 import '../../../core/services/navigation/navigation_service.dart';
-import '../../home/viewModel/home_view_model.dart';
+import '../../home/view_model/home_view_model.dart';
 
 class FavoritesViewModel extends ChangeNotifier with BaseViewModel {
   final databaseHelperService = DatabaseHelperService.instance;
@@ -47,8 +48,8 @@ class FavoritesViewModel extends ChangeNotifier with BaseViewModel {
     }
   }
 
-  void changeFocus() {
-    isFocus = !isFocus;
+  void changeFocus(value) {
+    isFocus = value;
     notifyListeners();
     if (isFocus == true) {
       focusNode.requestFocus();
@@ -60,8 +61,9 @@ class FavoritesViewModel extends ChangeNotifier with BaseViewModel {
   }
 
   Future searchWord(String value) async {
+    final lowercaseValue = value.toLowerCase();
     tempFavorites =
-        favorites.where((item) => item.word!.startsWith(value)).toList();
+        favorites.where((item) => item.word!.toLowerCase().startsWith(lowercaseValue)).toList();
     notifyListeners();
   }
 }

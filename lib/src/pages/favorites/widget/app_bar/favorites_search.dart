@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../../../../core/exports/constants_exports.dart';
-import '../../viewModel/favorites_view_model.dart';
+import '../../view_model/favorites_view_model.dart';
 
 class FavoritesSearch extends StatelessWidget {
   const FavoritesSearch({Key? key}) : super(key: key);
@@ -12,7 +13,7 @@ class FavoritesSearch extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(right: context.width * 0.04),
       child: GestureDetector(
-        onTap: () => model.changeFocus(),
+        onTap: () => model.changeFocus(true),
         child: Image.asset(
           IconConstants.search,
           width: context.width * 0.06,

@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
 import '../../../../common/models/words_model.dart';
 import '../../../../core/exports/constants_exports.dart';
 import '../../../home/widget/body/wordItem/word_meaning.dart';
 import '../../../home/widget/body/wordItem/word_title.dart';
-import '../../viewModel/favorites_view_model.dart';
+import '../../view_model/favorites_view_model.dart';
 
 class FavoriteItem extends StatelessWidget {
   final WordsModel item;

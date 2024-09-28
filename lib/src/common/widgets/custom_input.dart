@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../core/constants/text_styles/text_style_constants.dart';
 import '../../core/exports/constants_exports.dart';
 
 class CustomInput extends StatelessWidget {
@@ -24,7 +25,7 @@ class CustomInput extends StatelessWidget {
       decoration: InputDecoration(
         hintText: hintText,
         hintStyle: TextStyleConstants.regularStyle(
-          fontSize: 14,
+          fontSize: context.width*0.04,
           color: ColorConstants.darkGrey,
         ),
         contentPadding: EdgeInsets.symmetric(
